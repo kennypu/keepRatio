@@ -15,23 +15,19 @@
 		}
 		settings.ratio = settings.width / settings.height;
 
-		console.log(settings.ratio);
 		//setEvents
-		var current_width, new_height;
-		current_width = el.parent().width(); 
-		el.width(current_width); 
+		setRatio();
 
-		new_height = current_width / settings.ratio;
-		el.height(new_height);
+		$(window).on('resize',setRatio);
 
-		$(window).on('resize',function() {
+		function setRatio() {
 			var current_width, new_height;
 			current_width = el.parent().width(); 
 			el.width(current_width);
 
 			new_height = current_width / settings.ratio;
 			el.height(new_height);
-		});
+		}
 
 	}
 })(jQuery);
