@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+	<head>
+		<title>keepRatio.js demo</title>
+		<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+		<style>
+			.container { text-align: center; margin-top:4%;}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class='row-fluid'>
+				<div class='span12'>
+					<h1>KeepRatio.js Demo</h1>
+					<iframe width="560" height="315" src="http://www.youtube.com/embed/PEikGKDVsCc" frameborder="0" allowfullscreen></iframe>
+					<p>Try resizing the browser</p>
+				</div>
+				
+			</div>
+		</div>
+		<script src='http://code.jquery.com/jquery.min.js'></script>
+		<script src='js/keepRatio.js'></script>
+		<script>
+			$(function() {
+				$('iframe').keepRatio();
+			});
+		</script>
+	</body>
+</html>
